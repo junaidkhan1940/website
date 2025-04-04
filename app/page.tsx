@@ -127,7 +127,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
       <Head>
-        <title>Junaid Khan | Mechanical Engineer & SolidWorks Specialist</title>
+        <title>Junaid Khan | Mechanical Design Engineer</title>
         <meta name="description" content="Professional portfolio of Junaid Khan, Mechanical Engineer and SolidWorks specialist offering CAD design, technical engineering, and sustainable solutions." />
       </Head>
 
@@ -149,7 +149,7 @@ export default function Home() {
                 </span>
               </h1>
               <h2 className="text-2xl md:text-3xl font-semibold mb-6">
-                Mechanical Engineer & SolidWorks Specialist
+                Mechanical Design Engineer
               </h2>
               <p className="text-gray-700 dark:text-gray-300 text-lg mb-8 max-w-xl">
                 Transforming ideas into reality with precision engineering and innovative design solutions. Specializing in SolidWorks design, technical engineering, and sustainable solutions.

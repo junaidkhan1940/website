@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
                     <div className="col-span-1 md:col-span-2">
                         <h3 className="text-2xl font-bold mb-4">Junaid Khan</h3>
                         <p className="text-gray-400 mb-4 max-w-md">
-                            Mechanical Engineer & SolidWorks Specialist providing precision engineering,
+                            Mechanical Design Engineer providing precision engineering,
                             CAD design, and sustainable solutions.
                         </p>
                         <div className="flex space-x-4">

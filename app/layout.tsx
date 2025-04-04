@@ -7,7 +7,7 @@ import { ThemeProvider } from '@/components/theme-provider';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Junaid Khan | Mechanical Engineer & SolidWorks Specialist',
+  title: 'Junaid Khan | Mechanical Design Engineer',
   description: 'Professional portfolio of Junaid Khan, a Mechanical Engineer and SolidWorks specialist offering precision engineering, CAD design, and sustainable solutions.',
 };
 
