@@ -3,13 +3,13 @@
 
 import { useState, useEffect } from 'react';
 import Head from 'next/head';
-import { 
-  ChevronDown, 
-  Menu, 
-  X, 
-  ArrowRight, 
-  Linkedin, 
-  Mail, 
+import {
+  ChevronDown,
+  Menu,
+  X,
+  ArrowRight,
+  Linkedin,
+  Mail,
   Github,
   Phone,
   FileText,
@@ -37,18 +37,18 @@ export default function Home() {
   useEffect(() => {
     const handleScroll = () => {
       const sections = document.querySelectorAll('section[id]');
-      
+
       let currentSection = 'home';
       sections.forEach((section) => {
         const sectionTop = (section as HTMLElement).offsetTop;
         const sectionHeight = (section as HTMLElement).clientHeight;
-        
-        if (window.scrollY >= sectionTop - 200 && 
-            window.scrollY < sectionTop + sectionHeight - 200) {
+
+        if (window.scrollY >= sectionTop - 200 &&
+          window.scrollY < sectionTop + sectionHeight - 200) {
           currentSection = section.getAttribute('id') || 'home';
         }
       });
-      
+
       setActiveSection(currentSection);
     };
 
@@ -171,9 +171,9 @@ export default function Home() {
             >
               <div className="relative w-full aspect-square bg-gradient-to-br from-blue-100 to-teal-50 dark:from-blue-800/30 dark:to-teal-800/30 rounded-full overflow-hidden shadow-xl">
                 <div className="absolute inset-4 rounded-full overflow-hidden bg-white dark:bg-gray-800">
-                  <img 
-                    src="/images/profile.jpg" 
-                    alt="Junaid Khan" 
+                  <img
+                    src="/images/profile.jpg"
+                    alt="Junaid Khan"
                     className="w-full h-full object-cover"
                     onError={(e) => {
                       const target = e.target as HTMLImageElement;
@@ -244,9 +244,9 @@ export default function Home() {
             >
               <div className="relative rounded-lg overflow-hidden shadow-xl bg-gradient-to-br from-blue-50 to-teal-50 dark:from-blue-900/30 dark:to-teal-900/30 p-1">
                 <div className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden">
-                  <img 
-                    src="/images/engineer-working.jpg" 
-                    alt="Junaid Khan working on mechanical design" 
+                  <img
+                    src="/images/engineer-working.jpg"
+                    alt="Junaid Khan working on mechanical design"
                     className="w-full h-auto"
                     onError={(e) => {
                       const target = e.target as HTMLImageElement;
@@ -276,15 +276,15 @@ export default function Home() {
 
               {/* Timeline items */}
               <div className="space-y-12">
-                <TimelineItem 
+                <TimelineItem
                   date="February 2024 - Present"
                   title="Technical Engineer"
                   company="Öz-İş Torno, Nicosia"
                   description="Operating CNC Plasma and CNC Water Jet machines, designing with CAD/CAM software, troubleshooting machinery issues, and implementing manufacturing process improvements."
                   index={0}
                 />
-                
-                <TimelineItem 
+
+                <TimelineItem
                   date="March 2022 - January 2024"
                   title="Teaching Assistant"
                   company="Cyprus International University"
@@ -292,16 +292,16 @@ export default function Home() {
                   index={1}
                   right={true}
                 />
-                
-                <TimelineItem 
+
+                <TimelineItem
                   date="January 2022 - March 2022"
                   title="Trainee Engineer"
                   company="Cyprus International University, Nicosia"
                   description="Gained experience in control systems and instrumentation, working with engineers to learn technical aspects of equipment, and interpreting technical drawings."
                   index={2}
                 />
-                
-                <TimelineItem 
+
+                <TimelineItem
                   date="August 2022 - September 2023"
                   title="Intern"
                   company="Pak Elektron Limited, Lahore"
@@ -459,7 +459,7 @@ export default function Home() {
               className="lg:col-span-2"
             >
               <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
-              
+
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
                   <div className="bg-blue-100 dark:bg-blue-900/30 p-3 rounded-full">
@@ -472,8 +472,8 @@ export default function Home() {
                     </a>
                   </div>
                 </div>
-                
-                <div className="flex items-start space-x-4">
+
+                {/* <div className="flex items-start space-x-4">
                   <div className="bg-blue-100 dark:bg-blue-900/30 p-3 rounded-full">
                     <Phone className="h-6 w-6 text-blue-600 dark:text-blue-400" />
                   </div>
@@ -483,8 +483,8 @@ export default function Home() {
                       +92 335 030 4533
                     </a>
                   </div>
-                </div>
-                
+                </div>*/}
+
                 <div className="flex items-start space-x-4">
                   <div className="bg-blue-100 dark:bg-blue-900/30 p-3 rounded-full">
                     <Linkedin className="h-6 w-6 text-blue-600 dark:text-blue-400" />
@@ -505,7 +505,7 @@ export default function Home() {
                 </div>
               </div>
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}

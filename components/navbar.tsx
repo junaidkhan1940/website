@@ -46,7 +46,7 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
                     {/* Logo */}
                     <div className="flex-shrink-0">
                         <a href="#home" className="flex items-center">
-                            <span className="text-2xl font-bold text-blue-600 dark:text-blue-400">JK</span>
+                            <span className="text-2xl font-bold text-blue-600 dark:text-blue-400">JK Works</span>
                             <span className="ml-2 font-medium hidden sm:block">Junaid Khan</span>
                         </a>
                     </div>
