@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Menu, X, Moon, Sun } from 'lucide-react';
 import { useTheme } from 'next-themes';
+import Image from 'next/image';
 
 interface NavbarProps {
     activeSection: string;
@@ -35,19 +36,28 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
         { name: 'Home', href: '#home', id: 'home' },
         { name: 'About', href: '#about', id: 'about' },
         { name: 'Services', href: '#services', id: 'services' },
-        { name: 'Projects', href: '#projects', id: 'projects' },
+        { name: 'Mock-up Projects', href: '#mockup', id: 'mockup' },
+        { name: 'Mechanical Projects', href: '#mechanical', id: 'mechanical' },
+        { name: 'University Projects', href: '#projects', id: 'projects' },
         { name: 'Contact', href: '#contact', id: 'contact' },
     ];
 
     return (
-        <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md shadow-sm">
+        <header className="fixed top-0 left-0 right-0 z-50 bg-gray-900/80 backdrop-blur-md shadow-sm">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-16">
                     {/* Logo */}
-                    <div className="flex-shrink-0">
+                    <div className="flex-shrink-0 mt-2">
                         <a href="#home" className="flex items-center">
-                            <span className="text-2xl font-bold text-blue-600 dark:text-blue-400">JK Works</span>
-                            <span className="ml-2 font-medium hidden sm:block">Junaid Khan</span>
+                            <Image
+                                src={`/logo.png`}
+                                alt={`logo`}
+                                width={200}
+                                height={100}
+                                className="object-contain"
+                            />
+                            {/* <span className="text-2xl font-bold t text-blue-400">JK</span>
+                            <span className="ml-2 font-medium hidden sm:block">Junaid Khan</span> */}
                         </a>
                     </div>
 
@@ -58,8 +68,8 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
                                 key={item.id}
                                 href={item.href}
                                 className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${activeSection === item.id
-                                        ? 'text-blue-600 dark:text-blue-400'
-                                        : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'
+                                    ? 't text-blue-400'
+                                    : 't text-gray-300 hover:t hover:text-blue-400'
                                     }`}
                             >
                                 {item.name}
@@ -71,7 +81,7 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
                     <div className="flex items-center space-x-4">
                         <button
                             onClick={toggleTheme}
-                            className="p-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none"
+                            className="p-2 rounded-md t text-gray-300 hover hover:bg-gray-800 focus:outline-none"
                             aria-label="Toggle theme"
                         >
                             {mounted && theme === 'dark' ? (
@@ -83,7 +93,7 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
 
                         <button
                             onClick={toggleMenu}
-                            className="md:hidden p-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none"
+                            className="md:hidden p-2 rounded-md t text-gray-300 hover hover:bg-gray-800 focus:outline-none"
                             aria-label="Toggle menu"
                         >
                             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -95,19 +105,19 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
             {/* Mobile Navigation */}
             <div
                 className={`md:hidden transition-all duration-300 ease-in-out ${isMenuOpen
-                        ? 'max-h-64 opacity-100 visible'
-                        : 'max-h-0 opacity-0 invisible'
+                    ? 'max-h-64 opacity-100 visible'
+                    : 'max-h-0 opacity-0 invisible'
                     } overflow-hidden`}
             >
-                <div className="px-2 pt-2 pb-3 space-y-1 bg-white dark:bg-gray-900 shadow-md">
+                <div className="px-2 pt-2 pb-3 space- bg-gray-900 shadow-md">
                     {navItems.map((item) => (
                         <a
                             key={item.id}
                             href={item.href}
                             onClick={closeMenu}
                             className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${activeSection === item.id
-                                    ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20'
-                                    : 'text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800'
+                                ? 't text-blue-40 bg-blue-900/20'
+                                : 't text-gray-300 hove hover:bg-gray-800'
                                 }`}
                         >
                             {item.name}
