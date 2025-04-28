@@ -774,7 +774,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="flex items-start space-x-4">
+                {/* <div className="flex items-start space-x-4">
                   <div className="bg-blue-100 dark:bg-blue-900/30 p-3 rounded-full">
                     <Phone className="h-6 w-6 text-blue-600 dark:text-blue-400" />
                   </div>
@@ -784,7 +784,7 @@ export default function Home() {
                       +92 335 030 4533
                     </a>
                   </div>
-                </div>
+                </div> */}
 
                 <div className="flex items-start space-x-4">
                   <div className="bg-blue-100 dark:bg-blue-900/30 p-3 rounded-full">
